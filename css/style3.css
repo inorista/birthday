@@ -196,7 +196,10 @@ pre {
     padding-left: 12vw;
     max-width: 1000px;
 }
-
+.write2{
+    color: #F77B95;
+    font-size: 2vw;
+}
 .sub_write {
     color: black;
     font-size: 1vw;
