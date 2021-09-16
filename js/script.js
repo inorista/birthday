@@ -4,17 +4,25 @@ window.onload = function() {
     var scroll_path = document.getElementsByClassName('scroll_path')[0];
     var mouse_path = document.getElementsByClassName('mouse_path')[0];
     var pointer = document.getElementsByClassName('pointers')[0];
+    var moon = document.getElementsByClassName('moon')[0];
     scroll_path.addEventListener('mouseover', changeClr, false);
     mouse_path.addEventListener('mouseover', changeClr, false);
     scroll_path.addEventListener('mouseout', changeClrOut, false);
     mouse_path.addEventListener('mouseout', changeClrOut, false);
-
     function changeClr() {
         scroll.style.fill = '#FFAFAF';
         mouse.style.fill = '#FFAFAF';
         pointer.style.color = '#FFAFAF';
     }
-
+    function spinMoon(){
+        anime({
+            targets: '.moon',
+            rotate: '3turn',
+            duration: 15000,
+            easing: 'linear',
+            loop: true
+        })
+    }
     function changeClrOut() {
         scroll.style.fill = '#E8D4B5';
         mouse.style.fill = '#E8D4B5';
@@ -58,4 +66,5 @@ window.onload = function() {
     scrollDown()
     spin()
     spinGift()
+    spinMoon()
 }
